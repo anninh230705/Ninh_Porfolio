@@ -106,8 +106,8 @@ const Hero = () => {
               whileHover="hover"
               whileTap="tap"
               className="mt-8 sm:mt-10 inline-flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 
-                bg-blue-600 text-white rounded-full font-medium 
-                hover:bg-blue-700 transition-all duration-300 
+                bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white rounded-full font-medium 
+                hover:from-teal-500 hover:via-cyan-600 hover:to-blue-600 transition-all duration-300 
                 shadow-md hover:shadow-lg"
               aria-label="Download Nguyen An Ninh's Resume"
             >

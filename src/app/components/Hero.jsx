@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import download_icon from "@/public/icons/download-to-storage-drive.png";
 
 // Constants
 const RESUME_LINK =
-  "https://drive.google.com/uc?export=download&id=1UBNY3tQTWP6Q88t5zHPE-crWmnbXdruw";
+  "https://drive.google.com/uc?export=download&id=1LW3N6jiKjL5oN6FKT7SsO1w2B14nzvoQ";
 
 // Animation Variants
 const sectionVariants = {
@@ -48,7 +48,10 @@ const buttonVariants = {
   tap: { scale: 0.98, y: 0 },
 };
 
-const Parallax = dynamic(() => import("react-scroll-parallax").then(mod => mod.Parallax), { ssr: false });
+const Parallax = dynamic(
+  () => import("react-scroll-parallax").then((mod) => mod.Parallax),
+  { ssr: false }
+);
 
 const Hero = () => {
   return (

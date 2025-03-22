@@ -18,7 +18,11 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">
+    <section
+      id="projects"
+      style={{ minHeight: "calc(100vh - 56px)" }}
+      className="py-20 bg-gray-900 flex flex-col justify-center"
+    >
       <h2 className="text-4xl font-bold text-center text-white mb-12">
         My Projects
       </h2>

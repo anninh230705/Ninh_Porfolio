@@ -7,6 +7,7 @@ import loction_Icon from "@/public/imgs/location.png";
 import linkedin_Icon from "@/public/imgs/linkedin.png";
 import facebook_Icon from "@/public/imgs/facebook.png";
 import github_Icon from "@/public/imgs/github.png";
+import insta_Icon from "@/public/imgs/instagram.png";
 
 export default function Contact() {
   const handleMailClick = () => {
@@ -21,6 +22,33 @@ export default function Contact() {
         "https://www.google.com/maps?q=Bình+Thủy,+Cần+Thơ,+Việt+Nam",
         "_blank"
       );
+    }
+  };
+
+  const handleLinkedInClick = () => {
+    if (typeof window !== "undefined") {
+      window.open(
+        "https://www.linkedin.com/in/nguyen-an-ninh-393981356/",
+        "_blank"
+      );
+    }
+  };
+
+  const handleFacebookClick = () => {
+    if (typeof window !== "undefined") {
+      window.open("https://www.facebook.com/nguyen.an.ninh.451583/", "_blank");
+    }
+  };
+
+  const handleGitHubClick = () => {
+    if (typeof window !== "undefined") {
+      window.open("https://github.com/anninh230705", "_blank");
+    }
+  };
+
+  const handleInstagramClick = () => {
+    if (typeof window !== "undefined") {
+      window.open("https://www.instagram.com/no_inh333/ ", "_blank");
     }
   };
 
@@ -55,7 +83,7 @@ export default function Contact() {
             className="bg-white shadow-md rounded-lg p-6 text-center transform transition-transform
           duration-300 hover:scale-105 flex flex-col justify-center"
           >
-            <div className="bg-blue-100 p-4 rounded-full mb-4 flex justify-between items-center">
+            <div className="bg-blue-100 p-4 rounded-full mb-4 flex justify-between items-center gap-2">
               <Image
                 src={phone_Icon}
                 width={32}
@@ -83,144 +111,70 @@ export default function Contact() {
             <p className="font-bold text-lg text-gray-800">Location</p>
           </div>
           <div
-            className="bg-white shadow-md rounded-lg p-6 text-center transform transition-transform
-          duration-300 hover:scale-105"
+            className="bg-white shadow-md rounded-lg p-6 text-center cursor-pointer transform transition-transform
+            duration-300 hover:scale-105 flex flex-col justify-center"
+            onClick={handleLinkedInClick}
+            title="Visit LinkedIn profile"
           >
-            <div className="bg-blue-100 p-4 rounded-full mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 16l-4-4m0 0l4-4m-4 4h16"
-                />
-              </svg>
+            <div
+              className="flex items-center justify-center bg-blue-100 p-4 rounded-full mx-auto mb-4
+            w-16 h-16"
+            >
+              <Image
+                src={linkedin_Icon}
+                width={32}
+                height={32}
+                alt="LinkedIn"
+              />
             </div>
             <p className="font-bold text-lg text-gray-800">LinkedIn</p>
-            <p>
-              <a
-                href="https://linkedin.com/in/ninh"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linkedin.com/in/ninh
-              </a>
-            </p>
           </div>
           <div
-            className="bg-white shadow-md rounded-lg p-6 text-center transform transition-transform
-          duration-300 hover:scale-105"
+            className="bg-white shadow-md rounded-lg p-6 text-center cursor-pointer transform transition-transform
+            duration-300 hover:scale-105 flex flex-col justify-center"
+            onClick={handleFacebookClick}
+            title="Visit Facebook profile"
           >
-            <div className="bg-blue-100 p-4 rounded-full mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 20l-6-6m0 0l6-6m-6 6h16"
-                />
-              </svg>
+            <div
+              className="flex items-center justify-center bg-blue-100 p-4 rounded-full mx-auto mb-4
+            w-16 h-16"
+            >
+              <Image
+                src={facebook_Icon}
+                width={32}
+                height={32}
+                alt="Facebook"
+              />
             </div>
             <p className="font-bold text-lg text-gray-800">Facebook</p>
-            <p>
-              <a
-                href="https://facebook.com/ninh"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                facebook.com/ninh
-              </a>
-            </p>
           </div>
           <div
-            className="bg-white shadow-md rounded-lg p-6 text-center transform transition-transform
-          duration-300 hover:scale-105"
+            className="bg-white shadow-md rounded-lg p-6 text-center cursor-pointer transform transition-transform
+            duration-300 hover:scale-105 flex flex-col justify-center"
+            onClick={handleGitHubClick}
+            title="Visit GitHub profile"
           >
-            <div className="bg-blue-100 p-4 rounded-full mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 20l9-5-9-5-9 5 9 5z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 12l9-5-9-5-9 5z"
-                />
-              </svg>
+            <div
+              className="flex items-center justify-center bg-blue-100 p-4 rounded-full mx-auto mb-4
+            w-16 h-16"
+            >
+              <Image src={github_Icon} width={32} height={32} alt="GitHub" />
             </div>
             <p className="font-bold text-lg text-gray-800">GitHub</p>
-            <p>
-              <a
-                href="https://github.com/ninh"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github.com/ninh
-              </a>
-            </p>
           </div>
           <div
-            className="bg-white shadow-md rounded-lg p-6 text-center transform transition-transform
-          duration-300 hover:scale-105"
+            className="bg-white shadow-md rounded-lg p-6 text-center cursor-pointer transform transition-transform
+            duration-300 hover:scale-105 flex flex-col justify-center"
+            onClick={handleInstagramClick}
+            title="Visit Instagram profile"
           >
-            <div className="bg-blue-100 p-4 rounded-full mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14.5 9.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
-                />
-              </svg>
+            <div
+              className="flex items-center justify-center bg-blue-100 p-4 rounded-full mx-auto mb-4
+            w-16 h-16"
+            >
+              <Image src={insta_Icon} width={32} height={32} alt="Instagram" />
             </div>
             <p className="font-bold text-lg text-gray-800">Instagram</p>
-            <p>
-              <a
-                href="https://instagram.com/ninh"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                instagram.com/ninh
-              </a>
-            </p>
           </div>
         </div>
       </div>

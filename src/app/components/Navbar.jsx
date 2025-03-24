@@ -12,8 +12,32 @@ export default function Navbar() {
     const handleScroll = () => {
       if (typeof window !== "undefined") {
         setScrolled(window.scrollY > 50);
+
+        // Hủy activeClass nếu không nằm trong vùng có id
+        const sections = ["projects", "contact"];
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        let foundActive = false;
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { top, bottom } = element.getBoundingClientRect();
+            const elementTop = top + window.scrollY;
+            const elementBottom = bottom + window.scrollY;
+
+            if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+              foundActive = true;
+              break;
+            }
+          }
+        }
+
+        if (!foundActive) {
+          setActiveLink("");
+        }
       }
     };
+
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
     }
@@ -41,7 +65,7 @@ export default function Navbar() {
               to="projects"
               smooth={true}
               duration={1000}
-              offset={-56}
+              offset={-55}
               spy={true}
               onSetActive={handleSetActive}
               className={`hover:text-indigo-300 cursor-pointer transition-all duration-500 ease-in-out ${
@@ -58,7 +82,7 @@ export default function Navbar() {
               to="contact"
               smooth={true}
               duration={1000}
-              offset={-56}
+              offset={-60}
               spy={true}
               onSetActive={handleSetActive}
               className={`hover:text-indigo-300 cursor-pointer transition-all duration-500 ease-in-out ${

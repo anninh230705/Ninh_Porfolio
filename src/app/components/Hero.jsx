@@ -59,7 +59,8 @@ const Hero = () => {
       variants={sectionVariants}
       initial="hidden"
       animate="visible"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 font-sans"
+      id="hero"
+      className="relative min-h-screen h-[calc(100vh + 10px)] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 font-sans"
     >
       {typeof window !== "undefined" && (
         <Parallax speed={-20} className="absolute inset-0">

@@ -20,7 +20,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      style={{ minHeight: "calc(100vh - 56px)" }}
+      style={{ minHeight: "calc(100vh - 57px)" }}
       className="py-20 bg-gray-900 flex flex-col justify-center"
     >
       <h2 className="text-4xl font-bold text-center text-white mb-12">
